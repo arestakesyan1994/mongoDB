@@ -47,7 +47,8 @@ public class MongodbApplication extends WebMvcConfigurerAdapter implements Comma
 
 	@Override
 	public void run(String... strings) throws Exception {
-		User user = userRepository.findOneByEmail("admin@mail.com");
+		User user = userRepository.findOneByEmail(
+				"admin@mail.com");
 		if (user == null) {
 			User admin = User.builder()
 					.name("admin")
