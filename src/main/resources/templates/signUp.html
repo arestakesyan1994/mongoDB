@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+
+<form action="/addUser" th:object="${users}" method="post"><br/>
+    <h1 class="h3 mb-3 font-weight-normal">Please Sign Up</h1><br/>
+    <input type="text" th:field="*{name}" placeholder="Please input name"/><br/>
+    <input type="text" th:field="*{surname}" placeholder="Please input surname"/><br/>
+    <input type="email" th:field="*{email}" placeholder="Please input email"/><br/>
+    <input type="password" th:field="*{password}" placeholder="Please input password"/><br/>
+    <input type="submit" value="Sign Up"/>
+    <p class="mt-5 mb-3 text-muted">&copy; 2018</p><br/>
+    <a class="btn btn-sm btn-outline-secondary" href="/">Home</a>
+</form>
+</body>
+</html>
